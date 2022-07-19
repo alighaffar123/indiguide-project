@@ -1,0 +1,25 @@
+@import '/src/assets/scss/base/variable.scss';
+h1{
+    font-size: 4.6rem;
+}
+h4{
+    font-size: 1.13rem;
+}
+h2{
+    font-size: 2rem;
+    color: $heading;
+}
+.p-row{
+    padding: 2.2rem;
+}
+h5{
+    font-size: .95rem;
+}
+h6{
+    font-size: .8rem;
+}
+@media screen and (max-width: 767px){
+    h2 {
+        font-size: 1.5rem;
+    }
+}

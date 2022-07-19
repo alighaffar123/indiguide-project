@@ -1,0 +1,138 @@
+@import '/src/assets/scss/base/variable.scss';
+@import '/src/assets/scss/main.scss';
+section{
+        position: relative;
+    @media screen and (max-width : 1900px){
+        .container{
+            .p-row{
+                .card-box{
+                    .card{
+                        &:hover{
+                            box-shadow: 0 0 5px $primary;
+                            transform: scale(1.05);
+                            transition: all .3s ease-in-out;
+                            .card-footer{
+                                p{
+                                    font-size: 1rem;
+                                    transition: all .3s ease-in-out;
+                                    
+                                }
+                            }
+
+                        }
+                        box-shadow: 0 1px 1px 3px #ccb3362e;
+                        border-radius: 12px;
+                        margin-bottom: 15px;
+                        width: 100%;
+                        background-color: white;
+                        transition: all .3s ease-in-out;
+                        max-width: 312px;
+                        .card-body{
+                            padding: 6px;
+                            .card-img{
+                                position: relative;
+                                
+                                &::before{
+                                    content: "";
+                                    position: absolute;
+                                    width: 90px;
+                                    height: 86px;
+                                    top: 42px;
+                                    left: 55px;
+                                    background: url(/src/assets/img/review/img-background.png) no-repeat;
+                                    transform: translate(-50%,-50%);
+                                    background-size: contain;
+                                    z-index: 1;
+                                }
+
+                                width: 95px;
+                                height: 95px;
+                                img{
+                                    border: 4px solid $flash-white;
+                                    z-index: 2;
+                                }
+                            }
+                            .rating{
+                                display: flex;
+                                align-items: center;
+                                span{
+                                    .star{
+                                        color: $mustard;
+                                    }
+                                }
+                            }
+                            h5{
+                                font-size: 1.25rem;
+                            }
+                            p{
+                                min-height: 117px;
+                                line-height: 22px;
+                                font-size: .8rem;
+                                color:  $sonic-Silver;
+                                text-align: justify;
+                            }
+                        }
+                        .card-footer{
+                            p{
+                                transition: all .3s ease-in-out;
+                                color: $primary;
+                                font-size: .95rem;
+                                font-family: Open Sans,sans-serif;
+                            }
+                        }
+
+                    }
+                }
+            }
+            .google-logo{
+                div{
+                    img{
+                        width: 155px;
+                        height: 62px;
+                    
+                    }
+                }
+            }
+        }
+        &::after{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 1350px;
+            left: 0;
+            bottom: -42%;
+            background: url(/src/assets/img/review/review-bg.png) no-repeat;
+            background-size: cover;
+            opacity: .2;
+            z-index: -1;
+        }
+    } 
+
+    @media screen and (max-width : 992px){
+        h2{
+            margin: 0;
+        }
+        .container{
+            
+            .p-row{
+                scroll-snap-type: x mandatory;
+                scroll-behavior: smooth;
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                padding: 0 20px;
+                .card-box{
+                    width: unset;
+                }
+            }
+            
+        }
+    }
+    @media screen and (max-width: 767px){
+        &::after{
+            background-image: none;
+            background-color: $primary;
+            height: 90%;
+            top: 90px;
+        }  
+    }
+}

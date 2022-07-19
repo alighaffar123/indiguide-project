@@ -1,0 +1,57 @@
+@import '/src/assets/scss/base/variable.scss';
+@import '/src/assets/scss/main.scss';
+
+.featured {
+    @media screen and (max-width : 1900px) {
+        .container {
+            .p-row {
+                .logo-box {
+                    &:hover {
+                        img {
+                            filter: grayscale(0);
+                            opacity: 1;
+                        }
+                    }
+
+                    width: 18%;
+                    transition: transform .5s;
+                    background: $lotion;
+                    border: 1px solid #ccc;
+                    border-radius: 6px;
+                    margin-right: 20px;
+
+                    a {
+                        img {
+                            transition: all .25s ease-in-out;
+                            filter: grayscale(100%);
+                            opacity: .2;
+                            cursor: pointer;
+                            width: 140px;
+                            height: 95px;
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width : 992px){
+        .container{
+            .p-row{
+                flex-wrap: nowrap;
+                scroll-snap-type: x mandatory;
+                scroll-behavior: smooth;
+                overflow-x: auto;
+                padding: 0 20px;
+                .logo-box{
+                    padding: 0;
+                    min-width: 270px;
+                    margin-right: 24px;
+                }
+            }
+            .p-row::-webkit-scrollbar {
+                width: 0;
+            }
+        }
+    }
+}

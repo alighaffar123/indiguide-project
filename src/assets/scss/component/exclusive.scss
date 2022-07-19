@@ -1,0 +1,173 @@
+@import '/src/assets/scss/base/variable.scss';
+@import '/src/assets/scss/main.scss';
+@media screen and (max-width: 1900px){
+    .container{
+        .p-row{
+            .column-box{
+                .card{
+                    margin-top: 1.5rem;
+                    margin-bottom: 15px;
+                    background-color: #fff;
+                    box-shadow: 1px 1px 5px #00000040;
+                    transition: all .3s ease-in-out;
+                    max-width: 312px;
+                    border-radius: 5px;
+                    &:hover{
+                        transition: all .3s ease-in-out;
+                        transform: scale(1.05);
+                        margin-bottom: 5px;
+                        margin-top: 1rem;
+                        .card-body{
+                            a{
+                                img{
+                                    transition: all .3s ease-in-out;
+                                    max-height: 175px;
+                                }
+                            }
+                            .exclusive-info{
+                                transition: all .3s ease-in-out;
+                                h5,p{
+                                    transition: all .3s ease-in-out;
+                                    font-size: 1rem;
+                                }
+                            }
+                        }
+                    }
+                    .card-body{
+                        padding: 6px;
+                        a{
+                            
+                            color: $primary;
+                            text-decoration: none;
+                            background-color: transparent;
+                            img{
+                                transition: all .3s ease-in-out;
+                                max-width: 356px;
+                                max-height: 161px;
+                                border-radius: 10px;
+                            }
+                        }
+                        .exclusive-info{
+                            border-bottom: 1px solid #c2c2c2;
+                            transition: all .3s ease-in-out;
+                            h5{  
+                                transition: all .3s ease-in-out;
+                                max-width: calc(100% - 77px);
+                                line-height: 22px;
+                                font-family: Open Sans,sans-serif;
+                            }
+                            p{ 
+                                transition: all .3s ease-in-out;
+                                font-size: .95rem;
+                                font-family: Open Sans,sans-serif;
+                                
+                            }
+                        }
+                        .read-more{
+                            font-size: .8rem;
+                            color: $sonic-Silver;
+                            p{
+                                display: inline;
+                                margin-bottom: 0;
+                                line-height: 22px;
+                                font-weight: 500;
+                                margin-top: 0;
+    
+                            }
+                            span{
+                                a{
+                                    padding-left: 0.25rem;
+                                    color: $primary;
+                                    background-color: transparent;
+                                }
+                            }
+                        }
+                        
+                    }
+                    .card-footer{
+                        .footer-img{
+                            a{
+                                width: 50px;
+                                height: 50px;   
+                            }    
+                            .user-info {
+    
+                                .rating{
+                                    display: flex;
+                                    align-items: center;
+                                    span{
+                                        .star{
+                                            color: $mustard;
+                                        }
+                                    }
+                                }
+                            }  
+                            .link{
+                                a{
+                                    color: $primary;
+                                    font-weight: 500;
+                                    font-size: .8rem;
+                                }
+                            }
+                        }
+                    
+                    }
+                }
+            }
+        }
+        .button{
+            div{
+                a{
+                    width: 25%;
+                    background-color: $bg-btn;
+                    color: #fff;
+                    border: 2px solid #414a19;
+                    border-radius: 30px;
+                    font-size: 1.13rem;
+                    &:hover{
+                        background: transparent;
+                        color: $primary;
+                    }
+    
+                }
+            }
+        }
+        
+    }
+}
+@media screen and (max-width: 992px){
+    .container{
+        .p-row{
+            flex-wrap: nowrap;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            overflow-x: auto;
+            padding: 0 20px;
+            .column-box{
+                width: unset;
+            }
+        }
+    }
+}
+@media screen and (max-width: 767px){
+    .container{
+        .button{
+            div{
+               a{
+                width: 40%;
+               }
+            }
+        }
+    }   
+}
+@media screen and (max-width: 500px){
+    .container{
+        .button{
+            div{
+                a{
+                    min-width: 190px;
+                }
+            }
+        }
+    }   
+}

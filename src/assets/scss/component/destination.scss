@@ -1,0 +1,113 @@
+@import '/src/assets/scss/base/variable.scss';
+@import '/src/assets/scss/main.scss';
+@media screen and (max-width : 1900px){
+    .container{
+        .p-row{
+            .card{
+                border-radius: 30px 0 30px 30px;
+                max-width: 291px;
+                margin-bottom: 15px;
+                width: 100%;
+                box-shadow: 0 0 3px #00000099;
+                background-color: #fff;
+                transition: all .3s ease-in-out;
+                &:hover{
+                    margin-bottom: 0;
+                    box-shadow: 0 0 7px $primary;
+                    max-width: 312px;
+                    border-color: 2px solid $primary;
+                    transition: all .3s ease-in-out;
+                    .img-card{
+                        a{
+                            transition: all .3s ease-in-out;
+    
+                            height: 320px;
+                        }
+                    }
+                   
+                }
+                .img-card{
+                    a{
+                        transition: all .3s ease-in-out;
+                        height: 310px;
+                        img{
+                            border-radius: 30px 0 0 0;
+                            object-fit: cover;
+                        }
+                    }
+                }
+                .card-footer{
+                    font-size: 1.13rem;
+                    .destination-text{
+                        div{
+                            img{
+                                vertical-align: middle;
+                                width: 19px;
+                                height: 19px;
+                            }
+                            span{
+                                font-size: .95rem;
+                                color: $heading;
+                            }
+                            h6{
+                                font-family: Open Sans,sans-serif;
+                                border-radius: 30px;
+                                background-color: $header-badge;
+                            }
+                        }
+                        .button{
+                            a{
+                                background-color: $bg-btn;
+                                color: white;
+                                border: 2px solid #414a19;
+                                border-radius: 30px;
+                                font-size: .95rem;
+                                &:hover{
+                                    background-color: white;
+                                    color:  $bg-btn;
+                                }
+    
+                            }
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+}
+@media screen and (max-width : 992px){
+    .container{
+        .p-row{
+            padding: 0;
+        }
+    }
+}
+@media screen and (max-width : 576px){
+    .container{
+        .p-row{
+            .card{
+                .img-card{
+                    a{
+                        height: 200px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width : 400px){
+    .container{
+        .p-row{
+            .card{
+                .img-card{
+                    a{
+                        height: 150px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+

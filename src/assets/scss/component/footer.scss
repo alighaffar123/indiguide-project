@@ -1,0 +1,113 @@
+@import '/src/assets/scss/base/variable.scss';
+@import '/src/assets/scss/main.scss';
+span{
+    .footer{
+        @media screen and (max-width : 1900px){
+            .container-fluid {
+                width: 100%;
+                padding-right: 15px;
+                padding-left: 15px;
+                margin-right: auto;
+                margin-left: auto;
+                .footer-padding {
+                    padding: 0.644rem 5.3rem 0;
+                    padding-top: 0.644rem;
+                    padding-right: 5.3rem;
+                    padding-bottom: 0px;
+                    padding-left: 5.3rem;
+                    .logo-block{
+                        img{
+                            width: 120px;
+                            height: 18px;
+                        }
+                        p{
+                            line-height: 2;
+                            font-size: .88rem;
+                            color: $metal;
+                            text-align: justify;
+    
+                        }
+                    }
+                    .list-block{
+                        h5{
+                            font-size: 1rem;
+                        }
+    
+                        ul{
+                            list-style-type: none;
+                            line-height: 2;
+                            font-size: .88rem;
+                            li{
+                                a{
+                                    &:hover{
+                                        border-bottom: solid 1px  $metal ;
+                                    }
+                                    color: $metal;
+                                }
+                            }
+                        }
+    
+                    }
+                }
+                .copyright{
+                    padding: 0.644rem 5.3rem 0;
+                    border-top: 1px solid #dee2e6;
+                    .c-left{
+                        p{
+                            font-size: 13px;
+                            color: $footter-text;
+                            span{
+                                font-family: Open Sans,sans-serif;
+                            }
+                            a{
+                                cursor: pointer;
+                                color: $primary;
+                            }
+                        }
+                    }
+                    .c-right{
+                        ul{
+                            line-height: 1;
+                            list-style-type: none;
+                            li{
+                                padding-top: 4px;
+                                margin-right: 35px;
+                                a{
+                                    .icon{
+                                        color: silver;
+                                        font-size: 25px;
+                                        &:hover{
+                                            color: $primary;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+    
+                }
+            }
+        }
+        @media screen and (max-width : 1200px){
+            .container-fluid{
+                .copyright{
+                    padding: 0.644rem 2.2rem;
+                }
+            }
+        }  
+        @media screen and (max-width : 500px){
+            .container-fluid{
+                .copyright{
+                    padding: 0.644rem .2rem;
+                    .c-right{
+                        ul{
+                            li{
+                                margin-right: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
