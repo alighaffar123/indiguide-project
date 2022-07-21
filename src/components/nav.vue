@@ -204,7 +204,7 @@
       <div class="overlay-sidebar w-100 h-100 position-absolute"></div>
       <div class="menu-bar h-100 bg-white ms-sm-auto ms-0  me-sm-0 me-auto position-relative">
           <div class="button d-flex flex-wrap align-items-center mb-4">
-            <button @click="isHidden = !isHidden" class="btn cross-btn rounded-circle ms-auto d-flex flex-wrap align-items-center justify-content-center p-0">
+            <button @click="isHidden =  false" class="btn cross-btn rounded-circle ms-auto d-flex flex-wrap align-items-center justify-content-center p-0">
               <span>x</span>
             </button>
           </div>
