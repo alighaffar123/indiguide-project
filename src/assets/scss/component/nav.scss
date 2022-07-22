@@ -1,5 +1,7 @@
 @import '/src/assets/scss/base/variable.scss';
 @import '/src/assets/scss/main.scss';
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&family=Roboto&display=swap');
+
 
 
 
@@ -12,7 +14,7 @@ div{
     
         .container-fluid {
     
-            @media screen and (max-width : 1900px) {
+            @media screen and (max-width : 4000px) {
     
                 padding: 0.644rem 5.3rem;
     
@@ -32,15 +34,20 @@ div{
                     margin-left: 3rem;
     
                     li {
+                        padding-top: 1px;
                         margin-right: 2.2rem;
-    
-                        a {
+                        button{
+                            color: white;
+                            font-size: .84rem;
                             .arrow {
                                 color: $philippine-silver;
                                 margin-left: 0.75rem;
                                 font-size: 13px;
-                                transition: all 0.2s ease-in-out;
                             }
+                        }
+    
+                        a {
+                            
     
                             color: white;
                             font-size: .84rem;
@@ -50,86 +57,155 @@ div{
                             }
                         }
     
-                        .dropdown {
-    
-                            padding: 0px 40px;
+                      
+                        
+                    }
+                    .d-dop{
+                        display: inline;
+                        &::after {
+                               
+                            content: "";
                             position: absolute;
-                            height: 0;
-                            overflow: hidden;
+                            border-left: 11px solid transparent;
+                            border-right: 11px solid transparent;
+                            border-bottom: 13px solid white;
+                            z-index: 2;
+                            top: 49px;
+                            left: 322px;
                         }
-    
-                        &.show {
-                            a {
-                                .arrow {
-                                    transform: rotate(180deg);
-                                    transition: all 0.2s ease-in-out;
-                                }
-                            }
-    
-                            &::after {
-                                content: "";
-                                position: absolute;
-                                border-left: 11px solid transparent;
-                                border-right: 11px solid transparent;
-                                border-bottom: 13px solid white;
-                                z-index: 2;
-                                top: 49px;
-                                left: 322px;
-                            }
-    
-                            .dropdown {
-    
-                                box-shadow: 2px 2px 15px #00000033;
-                                list-style: none;
-                                z-index: 1;
-                                right: 0;
-                                border: none;
-                                margin-top: 62px;
-                                background-color: white;
-                                top: 0px;
-                                left: 0px;
-    
-                                width: 100%;
-                                height: 450px;
-    
-                                .container {
-                                    .custom-accordion {
-                                        h4 {
-                                            color: $heading;
-                                            font-size: 1.5rem;
-                                            font-weight: 500;
-                                            line-height: 1.2;
-                                        }
-    
-                                        .row {
-                                            .btn-block {
-                                                height: 340px;
-    
-                                                .btn-bg {
-                                                    background-color: $flash-white;
-                                                    border-radius: 8px;
-                                                    padding: 13px 15px 13px 0;
-                                                    box-shadow: 0 3px 4px #82808066;
-    
-                                                    div {
-                                                        a {
-                                                            &:hover {
-                                                                color: $dark-liver;
-                                                            }
-    
-                                                            color: $sonic-Silver;
-                                                            font-size: 1.22rem;
-    
+
+                        .dropdown {
+                            
+
+                            position: absolute;
+                            padding: 0px 0 0 40px;
+                            box-shadow: 2px 2px 15px #00000033;
+                            list-style: none;
+                            z-index: 1;
+                            right: 0;
+                            border: none;
+                            margin-top: 62px;
+                            background-color: white;
+                            top: 0px;
+                            left: 0px;
+
+                            width: 100%;
+                            height: 450px;
+
+                            .container {
+                                .custom-accordion {
+                                    h4 {
+                                        color: $heading;
+                                        font-size: 1.5rem;
+                                        font-weight: 500;
+                                        line-height: 1.2;
+                                    }
+
+                                    .row {
+                                        .btn-block {
+                                            overflow-y: scroll;
+                                            height: 340px;
+                                            padding: 0 16px;
+
+                                            .btn-bg {
+                                                background-color: $flash-white;
+                                                border-radius: 8px;
+                                                padding: 14px 15px 14px 0;
+                                                box-shadow: 0 3px 4px #82808066;
+
+                                                div {
+                                                    a {
+                                                        &:hover {
+                                                            color: $dark-liver;
+                                                        }
+                                                        font-weight: 500;
+                                                        color: $sonic-Silver;
+                                                        font-size: 1.13rem;
+
+                                                    }
+                                                    button{
+                                                        cursor: pointer;
+                                                        height: unset;
+                                                        line-height: unset;
+                                                        .icon{
+                                                            font-size: 14px;
+                                                            padding: 0 6px;
+                                                            color: #7c7a7a;
+                                                            transition: all 0.3s ease-in-out;
                                                         }
                                                     }
+                                                    .accordion-body{
+                                                        transition: all 0.4s ease-in-out;
+                                                        max-height: 0;
+                                                        overflow: hidden;
+                                                        ul{
+                                                                
+                                                                transition: all 0.4s ease-in-out;
+                                                                max-height: 0;
+                                                                overflow-y: hidden;
+                                                                list-style: none;
+                                                                display: none;
+                                                        }
+                                                        
+                                                        
+                                                    }
+                                                    &.show{
+                                                        .icon{
+                                                            transition: all 0.3s ease-in-out;
+                                                            transform: rotate(180deg);
+                                                        }
+                                                        .accordion-body{
+                                                        
+                                                            transition: all 0.4s ease-in-out;
+                                                            max-height: 200px;
+                                                            ul{
+                                                                transition: all 0.4s ease-in-out;
+                                                                max-height: 184px;
+                                                                overflow-y: scroll;
+                                                                display: block;
+                                                                li{
+                                                                    margin-top: 10px;
+                                                                    padding-bottom: 10px;
+                                                                    border-bottom: 1px solid #d1d1d1;
+                                                                    .img-a{
+                                                                        font-size: 1.13rem;
+                                                                        color: #fff;
+                                                                        font-weight: 500;
+                                                                        img{
+                                                                            width: 50px;
+                                                                            height: 50px;
+                                                                        
+                                                                        }
+                                                                    }
+                                                                    .text-a{
+                                                                        width: calc(100% - 50px);
+                                                                        color: #000;
+                                                                        font-size: 1rem;
+                                                                        font-weight: 500;
+                                                                    }
+                                                                }
+                                                            }
+                                                            ul::-webkit-scrollbar {
+                                                                width: 0;
+                                                            }
+                                                        }
+                                                    }
+                                                    
                                                 }
+                                            
+                                                    
+                                            
+                                                
                                             }
+                                        }
+                                        .btn-block::-webkit-scrollbar {
+                                            width: 0;
                                         }
                                     }
                                 }
                             }
                         }
-    
+                    
                     }
                 }
     
@@ -250,11 +326,7 @@ div{
             }
         }
     }
-    &.show {
-        .sidebar{
-            display: block;
-        }
-    }
+    
 
 }
 

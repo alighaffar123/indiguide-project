@@ -4,7 +4,7 @@
 
 
 .status-container {
-    @media screen and (max-width : 1900px) {
+    @media screen and (max-width : 4000px) {
 
         .row {
             padding: 0 8.95rem;
@@ -88,13 +88,13 @@
             &::before {
                 left: 0;
                 background: linear-gradient(45deg, transparent, $primary);
-                right: -36%;
+                right: -31%;
             }
 
             &::after {
                 right: 0;
                 background: linear-gradient(45deg, $primary, transparent);
-                left: -36%;
+                left: -31%;
             }
 
         }

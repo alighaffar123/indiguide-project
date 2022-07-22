@@ -3,7 +3,12 @@
 @import '/src/assets/scss/main.scss';
 
 .banner-section{
-    @media screen and (max-width : 1900px) {
+    @media screen and (min-width : 1921px) {
+        .search{
+            max-width: 1920px;
+        }
+    }
+    @media screen and (max-width : 4000px) {
         
             position: relative;
             .video{
@@ -299,6 +304,7 @@
                 }
             }
     }
+    
     @media screen and (max-width : 1180px){
             .video{
                 .video-title-overlay{
