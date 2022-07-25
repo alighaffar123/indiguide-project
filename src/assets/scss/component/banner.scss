@@ -27,9 +27,10 @@
                     }
                     h1{
                         font-family: 'Raleway', sans-serif;
-                        text-shadow: rgba(10, 10, 10, 0.5) 2px 1px 1px;
                         font-weight: 600;
                         text-transform: capitalize;
+                        line-height: 1.2;
+                        text-shadow: #00000080 2px 1px 1px;
                     }
                 }
                 .gradaint-bg{
@@ -67,7 +68,7 @@
                             background-color: hsla(0,0%,100%,.2);
                             input{
                                 color: white;
-                                padding: 10px 17px;
+                                padding: 8px 17px;
                                 width: 90%;
                                 border: none;
                                 background-color: transparent;
@@ -151,7 +152,7 @@
                             background-color: hsla(0,0%,100%,.2);
                             input{
                                 color: white;
-                                padding: 10px 17px;
+                                padding: 8px 17px;
                                 width: 90%;
                                 border: none;
                                 background-color: transparent;
@@ -273,10 +274,12 @@
                         h4{
                             color: #fff;
                             font-weight: 500;
+                            line-height: 1.2;
                         }
                         span{
                          color: #fff;   
                          font-weight: 500;
+                         line-height: 1.2;
                          font-size: 1.13rem;
                         }
                     }
@@ -315,6 +318,7 @@
                     }
                     h1{
                         font-size: 2.4rem;
+                        
                     }
                 }
             }

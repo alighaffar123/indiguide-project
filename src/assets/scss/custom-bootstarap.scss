@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400&family=Roboto&display=swap');
+
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins";
-
+@import "~bootstrap/scss/dropdown";
 @import "~bootstrap/scss/badge";
 @import "~bootstrap/scss/navbar";
 @import "~bootstrap/scss/containers";
@@ -11,12 +12,16 @@
 @import "~bootstrap/scss/buttons";
 @import "~bootstrap/scss/button-group";
 @import "~bootstrap/scss/dropdown";
+@import "~bootstrap/scss/button-group";
 
 *, html, body {
     font-family: 'Raleway', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-weight: 400;
+
+    line-height: 1.5;
 }
 // body{
 //     background-color: $Flash-White;

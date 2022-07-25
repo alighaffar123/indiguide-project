@@ -1,28 +1,24 @@
-<template>
-  <div  >
-    <nav class="navigation-indy position-fixed w-100 p-0">
+<template >
+  <div>
+    <nav id="na-v" class="navigation-indy na-v position-fixed w-100 p-0">
       <div class="d-flex flex-wrap align-items-center container-fluid">
         <span class="d-sm-none d-inline-block">
-          <button
-            @click="isHidden = true"
-            class="bg-transparent border-transparent"
-          >
+          <button @click="sidebar" class="bg-transparent border-transparent">
             <fa icon="bars" class="icon mt-1 text-white fs-2 arrow" />
           </button>
         </span>
         <a href="" calss=" logo  outline-none ">
           <img src="../assets/img/nav/logo-main.png" alt="" />
         </a>
-        <ul class="left-sidebar d-lg-flex d-none flex-wrap">
-          <li @click="dropDown = !dropDown" class="dropdown-button">
-            <button   class="bg-transparent border-transparent">
+        <ul class="left-navbar d-lg-flex d-none flex-wrap">
+          <li v-on:click="newfun" class="dropdown-button">
+            <button class="bg-transparent border-transparent">
               <span>DESTINATIONS</span>
               <fa icon="chevron-down" class="mt-1 arrow" />
             </button>
-            
           </li>
-          <div v-if="dropDown" class="d-dop">
-              <ul class="dropdown">
+          <div id="drop1" class="drop1">
+            <ul class="dropdown">
               <div class="px-0 container">
                 <div class="custom-accordion pt-5">
                   <h4 data-v-d34e7b72="" class="d-block mb-4">
@@ -143,7 +139,7 @@
                             Mongolia
                           </a>
                           <button
-                          @click.prevent="arrowDown($event)"
+                            @click.prevent="arrowDown($event)"
                             class="
                               position-relative
                               ms-auto
@@ -274,7 +270,7 @@
                             Russia
                           </a>
                           <button
-                          @click.prevent="arrowDown($event)"
+                            @click.prevent="arrowDown($event)"
                             class="
                               position-relative
                               ms-auto
@@ -402,7 +398,7 @@
                 </div>
               </div>
             </ul>
-            </div>
+          </div>
           <li>
             <a href="">
               <span>Listings</span>
@@ -421,7 +417,7 @@
         </ul>
         <ul
           class="
-            right-sidebar
+            right-navbar
             ms-sm-auto ms-0
             d-flex
             flex-wrap
@@ -429,7 +425,7 @@
             mb-0
           "
         >
-          <li class="d-ms-inline">
+          <li class="d-md-inline d-none">
             <a href="">
               <span>MAKE A REQUEST</span>
             </a>
@@ -445,19 +441,17 @@
             </a>
           </li>
           <li class="d-lg-none m-0 d-sm-inline-block d-none d-inline">
-            <button
-              @click="isHidden = true"
-              class="bg-transparent border-transparent"
-            >
+            <button @click="sidebar" class="bg-transparent border-transparent">
               <fa icon="bars" class="icon mt-1 text-white fs-2 arrow" />
             </button>
           </li>
         </ul>
       </div>
     </nav>
-    <div v-if="isHidden" class="position-fixed sidebar">
+    <div id="sideBar" class="position-fixed sidebar">
       <div class="overlay-sidebar w-100 h-100 position-absolute"></div>
       <div
+        id="side"
         class="
           menu-bar
           h-100
@@ -469,7 +463,7 @@
       >
         <div class="button d-flex flex-wrap align-items-center mb-4">
           <button
-            @click="isHidden = false"
+            @click="closeSide"
             class="
               btn
               cross-btn
@@ -512,15 +506,50 @@ export default {
   name: "nav-bar",
 
   setup() {
-    let isHidden = ref(false);
-    let dropDown = ref(false);
-     
+    var container = ref();
+    let nav = ref();
+    let side = ref();
+    
+   
+    let newfun = () => {
+        document.getElementById("drop1").style.display = "block";
+    };
+    let sidebar = () =>{
+      document.getElementById("sideBar").style.display = "block";
+    };
+    let closeSide = () => {
+      document.getElementById("sideBar").style.display = "none";
+    };
+    
+
+    document.addEventListener("mouseup", function (e) {
+      container.value = document.getElementById("drop1");
+      side.value = document.getElementById("side");
+      if (!container.value.contains(e.target)) {
+        container.value.style.display = "none";
+      }
+      if (!side.value.contains(e.target)) {
+        document.getElementById("sideBar").style.display= "none";
+      }
+    });
+    
+    window.addEventListener("scroll", function () {
+           nav.value = this.document.getElementById("na-v");
+      if (window.scrollY > 600) {
+        nav.value.style.background = "#00000080";
+      } else {
+        nav.value.style.background = "transparent";
+      }
+    });
+   
+    
+
     return {
-      isHidden,
-      dropDown
+      newfun,
+      sidebar,
+      closeSide
     };
   },
-
   methods: {
     arrowDown(event) {
       const active = document.querySelectorAll(".show");
@@ -532,7 +561,6 @@ export default {
       event.currentTarget.parentNode.classList.toggle("show");
     },
   },
-  
 };
 </script>
 <style lang="scss" scoped>

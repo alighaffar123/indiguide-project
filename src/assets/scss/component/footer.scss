@@ -35,9 +35,10 @@ span{
     
                         ul{
                             list-style-type: none;
-                            line-height: 2;
+                           
                             font-size: .88rem;
                             li{
+                                line-height: 2;
                                 a{
                                     &:hover{
                                         border-bottom: solid 1px  $metal ;
@@ -109,5 +110,13 @@ span{
                 }
             }
         }
+        @media screen and (max-width : 768px){
+            .container-fluid{
+                .copyright{
+                    background: #474545;
+                }
+            }
+        }
+
     }
 }

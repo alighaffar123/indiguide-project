@@ -31,7 +31,7 @@
                             <a href="" @click.prevent="arrowDown($event)">
                                 <fa icon="chevron-down" class=" position-absolute  arrow "/>
                             </a>
-                            <div class="country">
+                            <div id="country" class="country">
                                 <ul class="" >
                                     <li>
                                         <span>pakistan</span>
@@ -169,9 +169,9 @@
 </template>
 <script>
 
-
   export default {
     name:"banner-page",
+   
 
     methods: {
         arrowDown(event) {

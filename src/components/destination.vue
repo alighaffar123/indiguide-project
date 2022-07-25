@@ -1,6 +1,6 @@
 <template>
     <section class="destination" >
-        <h2 class=" text-center  pt-5 mb-lg-0 mb-4">
+        <h2 class=" text-center fw-bold  pt-5 mb-lg-0 mb-4">
             Select Your Destination
         </h2>
         <div class=" container">
