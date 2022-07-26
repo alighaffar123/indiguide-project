@@ -11,7 +11,7 @@
           <img src="../assets/img/nav/logo-main.png" alt="" />
         </a>
         <ul class="left-navbar d-lg-flex d-none flex-wrap">
-          <li v-on:click="newfun" class="dropdown-button">
+          <li @click="drop1" class="dropdown-button">
             <button class="bg-transparent border-transparent">
               <span>DESTINATIONS</span>
               <fa icon="chevron-down" class="mt-1 arrow" />
@@ -506,21 +506,21 @@ export default {
   name: "nav-bar",
 
   setup() {
-    var container = ref();
+    const container = ref();
     let nav = ref();
     let side = ref();
     
-   
-    let newfun = () => {
-        document.getElementById("drop1").style.display = "block";
-    };
-    let sidebar = () =>{
+
+    container.value = document.getElementById("drop1");
+   let drop1 = () => {
+       document.getElementById("drop1").style.display = "block";
+    }
+    let sidebar = () => {
       document.getElementById("sideBar").style.display = "block";
     };
     let closeSide = () => {
       document.getElementById("sideBar").style.display = "none";
     };
-    
 
     document.addEventListener("mouseup", function (e) {
       container.value = document.getElementById("drop1");
@@ -529,37 +529,30 @@ export default {
         container.value.style.display = "none";
       }
       if (!side.value.contains(e.target)) {
-        document.getElementById("sideBar").style.display= "none";
+        document.getElementById("sideBar").style.display = "none";
       }
     });
-    
+
     window.addEventListener("scroll", function () {
-           nav.value = this.document.getElementById("na-v");
+      nav.value = this.document.getElementById("na-v");
       if (window.scrollY > 600) {
         nav.value.style.background = "#00000080";
       } else {
         nav.value.style.background = "transparent";
       }
     });
-   
-    
 
     return {
-      newfun,
       sidebar,
-      closeSide
+      closeSide,
+      drop1,
     };
   },
   methods: {
     arrowDown(event) {
-      const active = document.querySelectorAll(".show");
-      active.forEach((node) => {
-        if (node != event.currentTarget.parentNode) {
-          node.classList.remove("show");
-        }
-      });
       event.currentTarget.parentNode.classList.toggle("show");
     },
+   
   },
 };
 </script>
