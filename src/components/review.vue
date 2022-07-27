@@ -1,5 +1,5 @@
 <template>
-    <section>
+    <section class="pt-2">
         <h2 class="text-center  fw-bold pb-5 mb-5 ">Our Guests Love Us</h2>
         <div class="container pt-3">
             <div class="row p-row pb-4 pt-lg-0 pt-md-0 pt-4">

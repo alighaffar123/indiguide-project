@@ -48,8 +48,8 @@
                     </div>
                 </div>
             </div>
-            <div class="vr-lines"></div>
-            <div class="hz-lines"></div>
+            <div class="d-md-inline-block d-none vr-lines"></div>
+            <div class=" d-md-inline-block d-none hz-lines"></div>
         </div>
     </section>
 </template>

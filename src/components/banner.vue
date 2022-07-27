@@ -2,7 +2,7 @@
   <section class="banner-section position-relative top-0">
     <div class="video position-relative w-100 overflow-hidden">
       <div class="video-title-overlay text-white">
-        <p class="text-center mb-2">Local Guides, Drivers, Tours</p>
+        <p class="text-center mb-1">Local Guides, Drivers, Tours</p>
         <h1 class="text-center">Lifechanging Experiences</h1>
       </div>
       <div class="video-wrapper d-md-block d-none">
@@ -27,11 +27,11 @@
               <input
                 @click="classhow($event)"
                 type="text"
-                placeholder="Select Destinations"
+                placeholder="Destination"
               />
-              <a href="" @click.prevent="arrowDown($event)">
-                <fa icon="chevron-down" class="position-absolute arrow" />
-              </a>
+              <div class="arrow" @click.prevent="arrowDown($event)">
+
+              </div>
               <div id="country" class="country">
                 <ul class="">
                   <li>
@@ -80,11 +80,11 @@
                 readonly
                 @click="classhow($event)"
                 type="text"
-                placeholder="Select Destinations"
+                placeholder="Category"
               />
-              <a href="" @click.prevent="arrowDown($event)">
-                <fa icon="chevron-down" class="position-absolute arrow" />
-              </a>
+             <div class="arrow" @click.prevent="arrowDown($event)">
+                
+              </div>
               <div class="country">
                 <ul class="">
                   <li>
@@ -123,7 +123,7 @@
           />
         </div>
         <div class="text">
-          <h4 class="mb-0 d-md-inline d-block">Verified</h4>
+          <h4 class="mb-0 d-md-inline d-block">Verified </h4>
           <span class="d-md-inline d-block">Hosts</span>
         </div>
       </div>
@@ -136,8 +136,8 @@
           />
         </div>
         <div class="text">
-          <h4 class="mb-0 d-md-inline d-block">Largest</h4>
-          <span class="d-lg-inline d-md-inline d-block">Selection</span>
+          <h4 class="mb-0 d-md-inline d-block">Local </h4>
+          <span class="d-lg-inline d-md-inline d-block">Impact</span>
         </div>
       </div>
       <div class="wrapper-cover cover-3 float-left text-center">
@@ -149,7 +149,7 @@
           />
         </div>
         <div class="text">
-          <h4 class="mb-0 d-md-inline d-block">Customized</h4>
+          <h4 class="mb-0 d-md-inline d-block">Customized </h4>
           <span class="d-lg-inline d-md-inline d-block">Trips</span>
         </div>
       </div>
@@ -162,8 +162,8 @@
           />
         </div>
         <div class="text">
-          <h4 class="mb-0 d-md-inline d-block">Insider</h4>
-          <span class="d-lg-inline d-md-inline d-block">Tips</span>
+          <h4 class="mb-0 d-md-inline d-block">Local </h4>
+          <span class="d-lg-inline d-md-inline d-block">Experts</span>
         </div>
       </div>
     </div>

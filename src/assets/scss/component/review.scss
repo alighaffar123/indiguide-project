@@ -38,7 +38,7 @@ section{
                                     width: 90px;
                                     height: 86px;
                                     top: 42px;
-                                    left: 55px;
+                                    left: 62px;
                                     background: url(/src/assets/img/review/img-background.png) no-repeat;
                                     transform: translate(-50%,-50%);
                                     background-size: contain;
@@ -63,6 +63,9 @@ section{
                             }
                             h5{
                                 font-size: 1.25rem;
+                                line-height: 1.2;
+                                margin-bottom: 0.5rem;
+                                padding-top: 1rem;
                             }
                             p{
                                 min-height: 117px;
@@ -78,6 +81,7 @@ section{
                                 color: $primary;
                                 font-size: .95rem;
                                 font-family: Open Sans,sans-serif;
+                                line-height: 22px;
                             }
                         }
 

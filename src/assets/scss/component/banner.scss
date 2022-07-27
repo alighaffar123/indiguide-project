@@ -18,18 +18,19 @@
                     z-index: 3;
                     right: 0;
                     left: 50%;
-                    top: 40%;
+                    top: 39%;
                     position: absolute;
                     transform: translate(-50%,-50%);
                     p{
                         letter-spacing: 1px;
                         font-size: 1.25rem;
+                        line-height: 2;
                     }
                     h1{
                         font-family: 'Raleway', sans-serif;
                         font-weight: 600;
                         text-transform: capitalize;
-                        line-height: 1.2;
+                        line-height: 1.21;
                         text-shadow: #00000080 2px 1px 1px;
                     }
                 }
@@ -68,8 +69,9 @@
                             background-color: hsla(0,0%,100%,.2);
                             input{
                                 color: white;
-                                padding: 8px 17px;
+                                padding: 8px 18px;
                                 width: 90%;
+                                line-height: 1.5;
                                 border: none;
                                 background-color: transparent;
                                 resize: none;
@@ -77,13 +79,34 @@
                             }
                             ::-webkit-input-placeholder { 
                                 color:    white;
+                                font-size: 13px;
                             }
                             .arrow{
-                                right: 15px;
-                                top: 11px;
-                                font-size: 13px;
-                                transition: all 0.2s ease-in-out;
-                                color: white;
+                                line-height: 16px;
+                                display: block;
+                                position: absolute;
+                                box-sizing: border-box;
+                                width: 36px;
+                                height: 35px;
+                                right: 1px;
+                                top: 1px;
+                                padding: 4px 4px;
+                                margin: 0;
+                                text-decoration: none;
+                                text-align: center;
+                                cursor: pointer;
+                                transition: transform 0.2s ease;
+                                &::before{
+                                    position: relative;
+                                    right: 0;
+                                    color: #999;
+                                    margin-top: 4px;
+                                    border-style: solid;
+                                    border-width: 5px 5px 0 5px;
+                                    content: "";
+                                    top: 70%;
+                                    border-color: #fff transparent transparent;
+                                }
                             }
                             .country{
                                 max-height: 0;
@@ -152,8 +175,9 @@
                             background-color: hsla(0,0%,100%,.2);
                             input{
                                 color: white;
-                                padding: 8px 17px;
+                                padding: 8px 18px;
                                 width: 90%;
+                                line-height: 1.5;
                                 border: none;
                                 background-color: transparent;
                                 resize: none;
@@ -162,13 +186,34 @@
                             }
                             ::-webkit-input-placeholder { 
                                 color:    white;
+                                font-size: 13px;
                             }
                             .arrow{
-                                right: 15px;
-                                top: 11px;
-                                font-size: 13px;
-                                transition: all 0.2s ease-in-out;
-                                color: white;
+                                line-height: 16px;
+                                display: block;
+                                position: absolute;
+                                box-sizing: border-box;
+                                width: 36px;
+                                height: 35px;
+                                right: 1px;
+                                top: 1px;
+                                padding: 4px 4px;
+                                margin: 0;
+                                text-decoration: none;
+                                text-align: center;
+                                cursor: pointer;
+                                transition: transform 0.2s ease;
+                                &::before{
+                                    position: relative;
+                                    right: 0;
+                                    color: #999;
+                                    margin-top: 4px;
+                                    border-style: solid;
+                                    border-width: 5px 5px 0 5px;
+                                    content: "";
+                                    top: 70%;
+                                    border-color: #fff transparent transparent;
+                                }
                             }
                             .country{
                                 max-height: 0;
@@ -235,7 +280,7 @@
                             width: 100%;
                             background: $primary;
                             border-radius: 30px;
-                            min-height: 40px;
+                            min-height: 38px;
                             border: none;
                             cursor: pointer;
                             &:hover{
@@ -311,10 +356,10 @@
     @media screen and (max-width : 1180px){
             .video{
                 .video-title-overlay{
-                    top: 40%;
+                    top: 39%;
                     p{
                         font-size: .9rem;
-                        font-weight: 600;
+                        font-weight: 500;
                     }
                     h1{
                         font-size: 2.4rem;

@@ -3,9 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&family=Roboto&display=swap');
 
 
-.data{
-    display: block;
-}
+
 
 div{
     
@@ -14,12 +12,21 @@ div{
         box-shadow: 1px 2px 3px 2px rgba(59, 59, 59, 0.2);
         top: 0;
         z-index: 14;
+        line-height: 1.3;
     
         .container-fluid {
     
             @media screen and (max-width : 4000px) {
     
                 padding: 0.644rem 5.3rem;
+                span{
+                    button{
+                        img{
+                            height: 24px;
+                            width: 24px;
+                        }
+                    }
+                }
     
                 a {
                     
@@ -37,20 +44,29 @@ div{
                     margin-left: 3rem;
     
                     li {
+                        line-height: 1.3;
                         padding-top: 1px;
                         margin-right: 2.2rem;
                         button{
                             color: white;
                             font-size: .84rem;
-                            .arrow {
-                                color: $philippine-silver;
-                                margin-left: 0.75rem;
-                                font-size: 13px;
+                            padding: 0;
+                            border: none;
+                            outline: 0;
+                            &:focus{
+                                box-shadow: none;
+                            }
+                            img{
+                                width: 12px;
+                                height: 12px;
+                                filter: grayscale(1);
+                                vertical-align: middle;
+                                margin-left: .7rem;
                             }
                         }
     
                         a {
-                            
+                            line-height: 1.3;
     
                             color: white;
                             font-size: .84rem;
@@ -64,7 +80,6 @@ div{
                         
                     }
                     .drop1{
-                        display: none;
                         &::after {
                                
                             content: "";
@@ -81,7 +96,7 @@ div{
                             
 
                             position: absolute;
-                            padding: 0px 0 0 40px;
+                            padding-inline-start: 40px;
                             box-shadow: 2px 2px 15px #00000033;
                             list-style: none;
                             z-index: 1;
@@ -105,15 +120,16 @@ div{
                                     }
 
                                     .row {
+                                        
                                         .btn-block {
                                             overflow-y: scroll;
                                             height: 340px;
-                                            padding: 0 16px;
+                                            padding: 0 15px 0 14px;
 
                                             .btn-bg {
                                                 background-color: $flash-white;
                                                 border-radius: 8px;
-                                                padding: 14px 15px 14px 0;
+                                                padding: 11px 15px 11px 0;
                                                 box-shadow: 0 3px 4px #82808066;
 
                                                 div {
@@ -121,6 +137,7 @@ div{
                                                         &:hover {
                                                             color: $dark-liver;
                                                         }
+                                                        line-height: 1.5;
                                                         font-weight: 500;
                                                         color: $sonic-Silver;
                                                         font-size: 1.13rem;
@@ -130,11 +147,13 @@ div{
                                                         cursor: pointer;
                                                         height: unset;
                                                         line-height: unset;
+                                                        padding: 1px 6px;
+
                                                         .icon{
-                                                            font-size: 14px;
-                                                            padding: 0 6px;
-                                                            color: #7c7a7a;
-                                                            transition: all 0.3s ease-in-out;
+                                                            transition: all 0.2s ease-in-out;
+                                                            width: 13px;
+                                                            vertical-align: middle;
+
                                                         }
                                                     }
                                                     .accordion-body{
@@ -205,6 +224,12 @@ div{
                                                 
                                             }
                                         }
+                                        .btn-block1{
+                                            padding-left: 12px;
+                                        }
+                                        .btn-block3{
+                                            padding-right: 12px;
+                                        }
                                         .btn-block::-webkit-scrollbar {
                                             width: 4px;
                                         }
@@ -263,6 +288,12 @@ div{
                             border-style: none;
                         }
                     }
+                    button{
+                        img{
+                            height: 29px;
+                            width: 29px;
+                        }
+                    }
     
                 }
             }
@@ -272,12 +303,11 @@ div{
                     margin-left: 2rem;
                     
                     li{
-                        margin-right: 1.5rem;
-                    }
+                        margin-right: 1.1rem;                    }
                 }
                 .right-navbar{
                     li{
-                        margin-right: 1.5rem;
+                        margin-right: 1.1rem;
                     }
                 }
             }
@@ -301,7 +331,6 @@ div{
         }
     }
     .sidebar{
-        display: none;
         max-height: 115%;
         background: transparent;
         width: 100%;
@@ -337,6 +366,110 @@ div{
                         line-height: 1.5;
 
                     }
+                }
+            }
+        }
+    }
+    .destination {
+        height: 115%;
+        background: transparent;
+        width: 100%;
+        z-index: 15;
+        .overlay-menu{
+            z-index: 16;
+            background-color: rgba(0,0,0,.5);
+        }
+        .side-menu-bar{
+            width: 300px;
+            padding: 20px;
+            z-index: 17;
+            .menu-header{
+                p{  
+                    font-size: 1.13rem;
+                    cursor: pointer;
+                    color: $heading;
+                    a{
+                        color: $heading;
+                        line-height: 1.5;
+                        img{
+                            filter: brightness(0);
+                            width: 16px;
+                            height: 16px;
+                            vertical-align: middle;
+
+                        }
+                    }
+                }
+                button{
+                    width: 35px;
+                    height: 35px;
+                    background-color: #fbd688;
+                    cursor: pointer;
+                }
+            }
+            ul{
+                max-height: 75%;
+                overflow-y: scroll;
+                overflow-x: hidden;
+                list-style: none;
+               
+                li{
+                    padding-bottom: 20px;
+                    a{
+                        color: #a5a5a5;
+                        font-size: .95rem;
+                        text-transform: uppercase;
+                        line-height: 1.5;
+                    }
+                    .icon{
+                        width: 16px;
+                        height: 16px;
+                        transition: all .3s ease-in-out;
+                        filter: grayscale(1);
+                        vertical-align: middle;
+                    }
+                    ul{
+
+                        max-height: 0;
+                        overflow: hidden;
+
+                    }
+
+
+                &.show{
+                    transition: all .3s ease-in-out;
+                    .icon{
+                        transform: rotate(180deg);
+                        transition: all .3s ease-in-out;
+                    }
+                    ul{
+                        transition: all .3s ease-in-out;
+                        max-height: 800px;
+                        .first-mt{
+                            padding-top: 20px;
+                        }
+                        li{
+                            padding-bottom: 20px;
+                            img{
+                                width: 45px;
+                                height: 45px;
+                                border-radius: 0.25rem;
+                            }
+                            a{
+                                width: calc(100% - 45px);
+                                color: #a5a5a5;
+                                font-size: .95rem;
+                                text-transform: capitalize;
+
+
+                            }
+                        }
+                        
+                    }
+
+                }
+
+                
                 }
             }
         }
